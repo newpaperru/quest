@@ -1,0 +1,235 @@
+@import url('../base.css');
+
+:root {
+	--pixel-bg: lightblue;
+	--pixel-border: black;
+	--pixel-border-2: white;
+	--pixel-border-3: var(--pixel-border);
+	--pixel: .125rem;
+}
+
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+.guessTheNumber-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gtn-inner {
+    width: 40%;
+    height: 20%;
+	box-shadow:
+		0 calc(var(--pixel) * -3) 0 calc(var(--pixel) * -1),
+		0 calc(var(--pixel) * 3) 0 calc(var(--pixel) * -1),
+		0 calc(var(--pixel) * -6) 0 calc(var(--pixel) * -2),
+		0 calc(var(--pixel) * 6) 0 calc(var(--pixel) * -2),
+		0 calc(var(--pixel) * -9) 0 calc(var(--pixel) * -4),
+		0 calc(var(--pixel) * 9) 0 calc(var(--pixel) * -4),
+		0 calc(var(--pixel) * -12) 0 calc(var(--pixel) * -6),
+		0 calc(var(--pixel) * 12) 0 calc(var(--pixel) * -6),
+		
+		calc(var(--pixel) * -1) 0 0 0 var(--pixel-border),
+		var(--pixel) 0 0 0 var(--pixel-border),
+		0 calc(var(--pixel) * -2) 0 0 var(--pixel-border),
+		0 calc(var(--pixel) * 2) 0 0 var(--pixel-border),
+		0 calc(var(--pixel) * -5) 0 calc(var(--pixel) * -1) var(--pixel-border),
+		0 calc(var(--pixel) * 5) 0 calc(var(--pixel) * -1) var(--pixel-border),
+		0 calc(var(--pixel) * -7) 0 calc(var(--pixel) * -2) var(--pixel-border),
+		0 calc(var(--pixel) * 7) 0 calc(var(--pixel) * -2) var(--pixel-border),
+		0 calc(var(--pixel) * -10) 0 calc(var(--pixel) * -4) var(--pixel-border),
+		0 calc(var(--pixel) * 10) 0 calc(var(--pixel) * -4) var(--pixel-border),
+		0 calc(var(--pixel) * -13) 0 calc(var(--pixel) * -6) var(--pixel-border),
+		0 calc(var(--pixel) * 13) 0 calc(var(--pixel) * -6) var(--pixel-border),
+		
+		calc(var(--pixel) * -2) 0 0 0 var(--pixel-border-2),
+		calc(var(--pixel) * 2) 0 0 0 var(--pixel-border-2),
+		0 calc(var(--pixel) * -1) 0 var(--pixel) var(--pixel-border-2), 
+		0 var(--pixel) 0 var(--pixel) var(--pixel-border-2),
+		0 calc(var(--pixel) * -4) 0 0 var(--pixel-border-2),
+		0 calc(var(--pixel) * 4) 0 0 var(--pixel-border-2),
+		0 calc(var(--pixel) * -6) 0 calc(var(--pixel) * -1) var(--pixel-border-2),
+		0 calc(var(--pixel) * 6) 0 calc(var(--pixel) * -1) var(--pixel-border-2),
+		0 calc(var(--pixel) * -8) 0 calc(var(--pixel) * -2) var(--pixel-border-2),
+		0 calc(var(--pixel) * 8) 0 calc(var(--pixel) * -2) var(--pixel-border-2),
+		0 calc(var(--pixel) * -11) 0 calc(var(--pixel) * -4) var(--pixel-border-2),
+		0 calc(var(--pixel) * 11) 0 calc(var(--pixel) * -4) var(--pixel-border-2),
+		0 calc(var(--pixel) * -14) 0 calc(var(--pixel) * -6) var(--pixel-border-2),
+		0 calc(var(--pixel) * 14) 0 calc(var(--pixel) * -6) var(--pixel-border-2),
+		
+		calc(var(--pixel) * -3) 0 0 0 var(--pixel-border-3),
+		calc(var(--pixel) * 3) 0 0 0 var(--pixel-border-3),
+		0 0 0 calc(var(--pixel) * 2) var(--pixel-border-3),
+		0 calc(var(--pixel) * -3) 0 var(--pixel) var(--pixel-border-3),
+		0 calc(var(--pixel) * 3) 0 var(--pixel) var(--pixel-border-3),
+		0 calc(var(--pixel) * -5) 0 0 var(--pixel-border-3),
+		0 calc(var(--pixel) * 5) 0 0 var(--pixel-border-3),
+		0 calc(var(--pixel) * -7) 0 calc(var(--pixel) * -1) var(--pixel-border-3),
+		0 calc(var(--pixel) * 7) 0 calc(var(--pixel) * -1) var(--pixel-border-3),
+		0 calc(var(--pixel) * -9) 0 calc(var(--pixel) * -2) var(--pixel-border-3), 
+		0 calc(var(--pixel) * 9) 0 calc(var(--pixel) * -2) var(--pixel-border-3),
+		0 calc(var(--pixel) * -12) 0 calc(var(--pixel) * -4) var(--pixel-border-3), 
+		0 calc(var(--pixel) * 12) 0 calc(var(--pixel) * -4) var(--pixel-border-3),
+		0 calc(var(--pixel) * -15) 0 calc(var(--pixel) * -6) var(--pixel-border-3), 
+		0 calc(var(--pixel) * 15) 0 calc(var(--pixel) * -6) var(--pixel-border-3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+}
+
+.gtn-inner > h2 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.gtn-content {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+input {
+    border-bottom: 1px solid gray;
+}
+
+.red {
+    border-bottom: 1px solid red;
+}
+
+input[type="number"] {
+    text-align: center;
+    padding-bottom: 5px;
+    font-size: 18px;
+}
+
+.gtn-content > img {
+    width: 40px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.gtn-inner > span {
+    margin-top: 10px;
+}
+
+.imgswrap {
+    display: inline-block;
+    position: relative;
+    z-index: -1;
+}
+
+.dialog {
+    position: absolute;
+    left: 40px;
+    top: -10px;
+    width: 100px;
+}
+
+.imgText {
+    position: absolute;
+    font-family: 'Press Start 2P', cursive;
+    top: -22px;
+    left: 54%;
+    font-size: 12px;
+   
+}
+
+
+.pixel2 {
+    font-size: 25px;
+    color: white;
+    height: auto;
+    margin: 10px;
+    font-family: 'VT323';
+    
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    text-transform: uppercase;
+    
+    cursor: pointer;
+    
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+ .pixel2:active {
+    top: 2px;
+  }
+  .pixel2 {
+    position: relative;
+    display: block;
+    margin: 10px;
+    font-family: 'VT323';
+    text-transform: uppercase;
+    
+    font-size: 25px;
+    color: white;
+  }
+  
+  .pixel2::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: -10px;
+    right: -10px;
+    background: black;
+    z-index: -1;
+  }
+  
+  .pixel2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: -6px;
+    right: -6px;
+    background: black;
+    z-index: -1;
+  }
+  
+  .pixel2 {
+    padding: 10px 10px;
+    position: relative;
+    background: black;
+    width: auto;
+    z-index: 2;
+  }
+
+.hide {
+    display: none;
+ }
+
+ @media (max-width: 1014px) {
+    .gtn-inner > h2 {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 772px) {
+    .gtn-inner > h2, #redText {
+        font-size: 8px;
+    }
+    #personAnsw {
+        max-width: 80px;
+    }
+
+    .pixel2 {
+        padding: 8px;
+        font-size: 10px;
+    }
+}

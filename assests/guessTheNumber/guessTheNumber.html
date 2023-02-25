@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="guessTheNumber.css">
+    <title>Угадай число</title>
+</head>
+<body>
+
+<div class="guessTheNumber-wrapper">
+    <div class="imgswrap">
+        <div class="dialog-wrap hide" id="dialogWrap">
+            <img src="../imagesandgifs/dialog.gif" alt="" class="dialog">
+            <span class="imgText" id="textDialog"></span>
+        </div>
+        <img src="../imagesandgifs/lynlyn-cute.gif  " alt="" class="cuteLyn">
+    </div>
+    <div class="gtn-inner">
+        <h2>Угадай число <span id="redText">1-100</span></h2>
+        <div class="gtn-content">
+            <input type="number" id="personAnsw">
+            <img src="../imagesandgifs/check.gif" alt="" id="imgCheck">
+            <div class="pixel2 hide" id="again">Попробуй снова!</div>
+        </div>
+        <span id="tryWrap">Попытки: <span id="try">7</span></span>
+    </div>
+</div>
+
+<script src="../jqu.js"></script>
+<script src="guessTheNumber.js"></script>
+</body>
+</html>
