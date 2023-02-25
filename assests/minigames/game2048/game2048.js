@@ -202,7 +202,7 @@ function makeMove(x, y, dx, dy, i){
   updateTile(12 * newX, 12 * newY, newX, newY);
   $('.tile-' + x + '-' + y + '').remove();
   
-  if(newValue == 8){
+  if(newValue == 2048){
     won();
   }
 }
