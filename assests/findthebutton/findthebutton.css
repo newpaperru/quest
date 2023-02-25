@@ -1,0 +1,135 @@
+@import url("../base.css");
+body {
+  width: 100%;
+  height: 100vh;
+  padding: 10px;
+
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.find-button {
+  height: 100%;
+  padding-top: 50px;
+}
+
+.find-button> h2 {
+    text-align: center;
+}
+
+.container {
+  position: relative;
+  max-width: 80%;
+
+  font-family: "VT323";
+  font-size: 25px;
+  color: white;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 32px 10px 32px 20px;
+  background: black;
+  z-index: 2;
+}
+
+.ticket {
+  width: calc(4%);
+  height: 30px;
+  background: orange;
+
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 3px;
+  
+}
+
+.cats {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.dialog {
+    left: 52%;
+    width: 85px;
+    top: -41px;
+}
+
+.text {
+    color: black;
+    top: -53px;
+    left: 52.3%;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 9px;
+}
+
+.container::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: -10px;
+  right: -10px;
+  background: black;
+  z-index: -1;
+}
+
+.container::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: -6px;
+  right: -6px;
+  background: black;
+  z-index: -1;
+}
+
+@media (max-width: 1372px) {
+  .container {
+    font-size: 18px;
+  }
+}
+
+@media(max-width: 952px) {
+  .ticket {
+    width: calc(10%);
+  }
+}
+
+@media (max-width: 731px) {
+  .ticket {
+    width: calc(15%);
+  }
+}
+
+@media (max-width: 520px) {
+  #hfb {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 508px) {
+  .ticket {
+    width: 18%;
+  }
+}
+
+@media (max-width: 431px) {
+  .ticket {
+    width: 22%;
+  }
+
+  .find-button {
+    padding-top: 20px;
+  }
+}
