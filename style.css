@@ -110,8 +110,8 @@
 }
 
 @media (max-width: 654px) {
-    #anim > span {
-        font-size: 10px;
+    #anim > span, .task {
+        font-size: 8px;
     }
 
     #gifYR {
