@@ -2,7 +2,6 @@ let container = document.getElementById('cont');
 let randomIndex = Math.floor(Math.random()*500);
 let randomIndexMobile952 = Math.floor(Math.random()*100);
 let randomIndexMobile508 = Math.floor(Math.random()*49);
-console.log(randomIndex,randomIndexMobile952,randomIndexMobile508);
 let dialogWrap = document.getElementById('dw');
 let dialogText = document.getElementById('dialog-text');
 let h2OfFindButton = document.getElementById('hfb');
