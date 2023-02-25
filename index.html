@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Квест!</title>
+</head>
+<body>
+
+<div class="first-page-wrapper" id="firstPage">
+    <div class="first-page-inner">
+        <h1 id="anim"></h1>
+        <a href="#" class="button" id="btnStart">
+            <div class="button__line"></div>
+            <div class="button__line"></div>
+            <span class="button__text">СТАРТ</span>
+            <div class="button__drow1"></div>
+            <div class="button__drow2"></div>
+          </a>
+        <div class="hint-wrapper">
+            <img src="assests/imagesandgifs/info.png" alt="">
+            <div class="hide-hint">
+                <p>Не обновляйте страничку! <br> Иначе придется проходить все заново!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="second-page-wrapper hide-page" id="secondPage">
+    <div class="second-page-inner">
+        <h2 class="task" id="test">Решите математическую задачу!</h2>
+        <div class="math-wrapper" id="math">
+            <div class="math-inner" id>
+                <div class="numberOne-wrap" id="num1"></div>
+                <div class="operator-wrap" id="oper"></div>
+                <div class="numberTwo-wrap" id="num2"></div>
+                <span>=</span>
+                <div class="result-wrap">
+                    <input type="number" id="res" class="inputResult" value="">
+                </div>
+            </div>
+        </div>
+        <a href="#" class="button" id="btnCheckAnswer">
+            <div class="button__line"></div>
+            <div class="button__line"></div>
+            <span class="button__text">ПРОВЕРИТЬ</span>
+            <div class="button__drow1"></div>
+            <div class="button__drow2"></div>
+        </a>
+        <a href="#" class="button hide-page" id="btnTryAgain">
+            <div class="button__line"></div>
+            <div class="button__line"></div>
+            <span class="button__text">НАЧАТЬ ЗАНОВО</span>
+            <div class="button__drow1"></div>
+            <div class="button__drow2"></div>
+        </a>
+        <img src="assests/imagesandgifs/tryagain.gif" alt="giftryagain" class="hide-page small-gif" id="gifYF">
+        <img src="assests/imagesandgifs/yourright.gif" alt="gifyourright" class="hide-page" id="gifYR">
+        <div class="counter" id="CounterWrap">
+            <span>Осталось </span><span id="count">3</span><span> попытки</span>
+        </div>
+    </div>
+</section>
+<script src="assests/jqu.js"></script>
+<script src="main.js"></script>
+</body> 
+</html>
